@@ -34,3 +34,10 @@ const server = Bun.serve({
   })
   
   console.log(`Listening on ${server.url}`);
+
+  const a = Bun.serve({
+    port:2333,
+    fetch(req){
+      return new Response("bun!")
+    }
+  })
